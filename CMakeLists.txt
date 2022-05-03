@@ -6,8 +6,9 @@ set(CMAKE_CXX_STANDARD 11)
 include_directories([AFTER|BEFORE] [SYSTEM] include)
 
 set(ENGINE_SOURCE
-    #${CMAKE_CURRENT_LIST_DIR}/include/engine.h
+    ${CMAKE_CURRENT_LIST_DIR}/src/particle.cpp
     ${CMAKE_CURRENT_LIST_DIR}/src/engine.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/src/pfgen.cpp
 )
 
 add_library(engine STATIC ${ENGINE_SOURCE})
