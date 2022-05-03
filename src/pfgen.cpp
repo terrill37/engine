@@ -9,3 +9,7 @@ void ParticleForceRegistry::updateForces(real duration){
     }
 }
 
+void ParticleGravity::updateForce(Particle* particle, real duration){
+    if(!particle->hasFiniteMass()) return;
+    particle->addForce(gravity * particle->getMass());
+}
