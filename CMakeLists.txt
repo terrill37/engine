@@ -17,7 +17,14 @@ set(TESTING_SOURCE
     ${CMAKE_CURRENT_LIST_DIR}/src/testing.cpp
 )
 
+set(GAME_SOURCE
+    ${CMAKE_CURRENT_LIST_DIR}/src/Game.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/src/main.cpp
+)
+
 add_executable(program ${TESTING_SOURCE})
+
+add_executable(game ${GAME_SOURCE})
 
 target_link_libraries(program
     engine
