@@ -1,13 +1,12 @@
 #include <vector>
 #include "particle.h"
 
-
-class ParticleForceGenerator{
+namespace vec{
+    class ParticleForceGenerator{
     public:
         virtual void updateForce(Particle *particle, real duration) = 0;
-};
-
-namespace vec{
+    };   
+    
     class ParticleForceRegistry{
         protected:
             struct ParticleForceRegistration{
@@ -33,5 +32,17 @@ namespace vec{
             ParticleGravity(const Vector3 &gravity);
             virtual void updateForce(Particle *particle, real duration);
     };
+
+    class ParticleDrag : public ParticleForceGenerator{
+        real k1;
+        real k2;
+
+        public:
+            ParticleDrag(real k1, real k2);
+
+            virtual void updateForce(Particle *particle, real duration);
+    };
+
+
 }
 

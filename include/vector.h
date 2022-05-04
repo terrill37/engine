@@ -17,9 +17,7 @@ namespace vec{
                 : x(x), y(y), z(z){}
 
             void clear(){
-                x=0;
-                y=0;
-                z=0;
+                x=y=z=0;
             }
 
             void invert(){
