@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/window.h
+SFML/Graphics.hpp
+-
+
+/home/wterrill/gameEngine/src/window.cpp
+window.h
+/home/wterrill/gameEngine/src/window.h
+

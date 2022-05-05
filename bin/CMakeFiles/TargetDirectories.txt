@@ -1,0 +1,4 @@
+/home/wterrill/gameEngine/bin/CMakeFiles/rebuild_cache.dir
+/home/wterrill/gameEngine/bin/CMakeFiles/edit_cache.dir
+/home/wterrill/gameEngine/bin/CMakeFiles/game.dir
+/home/wterrill/gameEngine/bin/CMakeFiles/engine.dir
