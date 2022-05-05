@@ -1,10 +1,21 @@
 #include "Game.hpp"
 
-void Game::Update(){}
+Game::Game() : window("that game"){}
+
+void Game::Update(){
+    window.Update();
+}
+
 void Game::LateUpdate(){}
-void Game::Draw(){}
+
+void Game::Draw(){
+    window.BeginDraw();
+
+    window.EndDraw();
+}
+
 bool Game::IsRunning() const{
-    return true;
+    return window.IsOpen();
 }
 
 
