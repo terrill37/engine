@@ -15,28 +15,28 @@ For window, need to setup sfml correctly by building and installing to system.
     - `SFML_BUILD_TEST_SUIT`
     and press `c` to configure/update `CMakeCache.txt` 
 6. Make sure dependencies are installed (development versions required)
-    freetype:
-        Library used for font operations such as rendering text onto bitmaps|
-    x11:
-        Windowing system that provides the basic framework for a GUI environment|
-    xrandr:
-        Utility used to set the size, orientation or reflection of the outputs for a screen|
-    udev:
-        Device manager for the Linux kernel|
-    opengl:
-        Cross-platform API for rendering 2D and 3D graphics|
-    flac:
-        Audio coding format for lossless compression of digital audio|
-    ogg:
-        Open container format providing efficient streaming and manipulation of digital multimedia|
-    vorbis:
-        Audio coding format and software reference encoder/decoder for lossy audio compression|
-    vorbisenc, vorbisfile:
-        Libraries for encoding audio in Vorbis format|
-    openal:
-        Cross-platform audio API that uses coding conventions similar to OpenGL|
-    pthread:
-        C library for managing threads. Provides an API to perform multithreading|
+    - freetype:
+        Library used for font operations such as rendering text onto bitmaps
+    - x11:
+        Windowing system that provides the basic framework for a GUI environment
+    - xrandr:
+        Utility used to set the size, orientation or reflection of the outputs for a screen
+    - udev:
+        Device manager for the Linux kernel
+    - opengl:
+        Cross-platform API for rendering 2D and 3D graphics
+    - flac:
+        Audio coding format for lossless compression of digital audio
+    - ogg:
+        Open container format providing efficient streaming and manipulation of digital multimedia
+    - vorbis:
+        Audio coding format and software reference encoder/decoder for lossy audio compression
+    - vorbisenc, vorbisfile:
+        Libraries for encoding audio in Vorbis format
+    - openal:
+        Cross-platform audio API that uses coding conventions similar to OpenGL
+    - pthread:
+        C library for managing threads. Provides an API to perform multithreading
 7. `make` (optional check that SFML compiles)
 8. `sudo make install` 
     - the SMFL components will be copied to install locations specified in the `CMakeCache.txt` file
