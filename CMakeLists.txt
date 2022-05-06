@@ -17,7 +17,7 @@ if(NOT CMAKE_BUILD_TYPE)
         )
 endif()
 
-#target_include_directories(gameEngine PRIVATE ${CMAKE_CURRENT_LIST_DIR}/include)
+include_directories(gameEngine PRIVATE ${CMAKE_CURRENT_LIST_DIR}/include)
 
 #set(SFML_STATIC_LIBRARIES TRUE)
 find_package(SFML 2.5
@@ -25,7 +25,10 @@ find_package(SFML 2.5
              system window graphics network audio REQUIRED)
 
 #compile executable
-add_executable(gameEngine ${CMAKE_CURRENT_LIST_DIR}/src/main.cpp ${CMAKE_CURRENT_LIST_DIR}/include/window.hpp)
+#set(SOURCES
+add_executable(gameEngine ${CMAKE_CURRENT_LIST_DIR}/src/main.cpp 
+                          ${CMAKE_CURRENT_LIST_DIR}/src/Game.cpp 
+                          ${CMAKE_CURRENT_LIST_DIR}/src/window.cpp)
 #                           ${CMAKE_CURRENT_LIST_DIR}/src/Game.cpp)
 
 #target_include_directories(gameEngine PRIVATE ${CMAKE_CURRENT_LIST_DIR}/include)

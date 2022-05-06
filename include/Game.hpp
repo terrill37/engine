@@ -1,7 +1,7 @@
 #ifndef Game_hpp
 #define Game_hpp
 
-#include <SFML/Graphics.hpp>
+//#include <SFML/Graphics.hpp>
 
 #include "window.hpp"
 #include <iostream>
@@ -16,7 +16,7 @@ class Game{
         bool IsRunning() const;
 
     private:
-//        Window window;
+        Window window;
 };
 
 #endif // Game_hpp

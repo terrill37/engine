@@ -1,7 +1,9 @@
 #ifndef Window_hpp
 #define Window_hpp
 
-//#include <SFML\Graphics.hpp>
+#include <string>
+#include <SFML/Graphics.hpp>
+
 class Window{
     public:
         Window(const std::string& windowName);
