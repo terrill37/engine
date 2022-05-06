@@ -15,10 +15,10 @@ For window, need to setup sfml correctly by building and installing to system.
     - `SFML_BUILD_TEST_SUIT`
     and press `c` to configure/update `CMakeCache.txt` 
 6. Make sure dependencies are installed (development versions required)
-    - freetype:
-        Library used for font operations such as rendering text onto bitmaps
-    - x11:
-        Windowing system that provides the basic framework for a GUI environment
+    - freetype
+        : Library used for font operations such as rendering text onto bitmaps
+    - x11 
+        : Windowing system that provides the basic framework for a GUI environment
     - xrandr:
         Utility used to set the size, orientation or reflection of the outputs for a screen
     - udev:
