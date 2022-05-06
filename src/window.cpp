@@ -1,7 +1,7 @@
 #include "window.hpp"
 #include <iostream>
 
-Window::Window(const std::string& windowName) : window(sf::VideoMode(200,200), windowName, sf::Style::Titlebar) {
+Window::Window(const std::string& windowName) : window(sf::VideoMode(800,800), windowName, sf::Style::Titlebar) {
     window.setVerticalSyncEnabled(true);
 }
 
@@ -13,6 +13,7 @@ void Window::Update(){
     //std::cout<<"Enter button: "<<sf::Keyboard::Enter<<std::endl;
     //window.pollEvent(event);
     //std::cout<<"Pressed button: "<<event.key.code<<std::endl;
+    //if(window.pollEvent(event)){
     while(sf::Keyboard::isKeyPressed){ //LOOK INTO FIXING IN FUTURE
         //window.pollEvent(event);
         //std::cout<<"Pressed button: "<<event.key.code<<std::endl;
@@ -29,7 +30,10 @@ void Window::Update(){
             window.close();
             break;
         }
-        
+        //if(event.type==sf::Event::Closed){
+        //    window.close();
+        //}
+
         else break;
     }
 }

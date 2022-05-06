@@ -7,6 +7,7 @@
 class Window{
     public:
         Window(const std::string& windowName);
+
         void Update();
 
         void BeginDraw();
