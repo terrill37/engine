@@ -13,28 +13,33 @@ void Window::Update(){
     //std::cout<<"Enter button: "<<sf::Keyboard::Enter<<std::endl;
     //window.pollEvent(event);
     //std::cout<<"Pressed button: "<<event.key.code<<std::endl;
-    //if(window.pollEvent(event)){
-    while(sf::Keyboard::isKeyPressed){ //LOOK INTO FIXING IN FUTURE
+    while(window.pollEvent(event)){
+    //while(sf::Keyboard::isKeyPressed){ //LOOK INTO FIXING IN FUTURE
         //window.pollEvent(event);
         //std::cout<<"Pressed button: "<<event.key.code<<std::endl;
         //std::cout<<"Escape button: "<<sf::Keyboard::Escape<<std::endl;
         //std::cout<<"POLL EVENT\n";
-        if(sf::Keyboard::isKeyPressed(sf::Keyboard::Down)){
-            std::cout<<"detected key down\n";
-            window.close();
-            break;
-        }
-
-        if(sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)){
-            std::cout<<"detected key\n";
-            window.close();
-            break;
-        }
-        //if(event.type==sf::Event::Closed){
+        //if(sf::Keyboard::isKeyPressed(sf::Keyboard::Down)){
+        //    std::cout<<"detected key down\n";
         //    window.close();
+        //    break;
         //}
 
-        else break;
+        //if(sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)){
+        //    std::cout<<"detected key\n";
+        //    window.close();
+        //    break;
+        //}
+        std::cout<<"event type: "<< event.type<<std::endl;
+        if(event.type==sf::Event::Closed){
+            window.close();
+        }
+        if(event.type==sf::Event::KeyPressed){
+            if(event.key.code==sf::Keyboard::Escape)
+                window.close();
+        }
+
+        //else break;
     }
 }
 

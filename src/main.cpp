@@ -3,20 +3,20 @@
 //#include "window.hpp"
 
 #include <SFML/Graphics.hpp>
-//int main(){
-//    Game game;
-//    while(game.IsRunning()){
-//    //for(int i=0; i<10; i++){
-//        game.Update();
-//        game.LateUpdate();
-//        game.Draw();
-//    //    std::cout<<"testing game loop\n";
-//    }
-//    std::cout<<"testing game\n";
-//    return 0;
-//}
+int main(){
+    Game game;
+    while(game.IsRunning()){
+    //for(int i=0; i<10; i++){
+        game.Update();
+        game.LateUpdate();
+        game.Draw();
+    //    std::cout<<"testing game loop\n";
+    }
+    std::cout<<"testing game\n";
+    return 0;
+}
 
-int main(int srgc, char* argv[]){
+/*int main(int srgc, char* argv[]){
     sf::Window window(sf::VideoMode(800,600),"SFML");
     int frame=0;   
     //std::cout<<"event type: "<< Event.type<<std::endl
@@ -33,8 +33,6 @@ int main(int srgc, char* argv[]){
         int i=0;
         int k=0;
         sf::Event Event;
-        if(sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
-            std::cout<<"key pressed: "<<sf::Keyboard::isKeyPressed(sf::Keyboard::Down)<<std::endl;
         while(window.pollEvent(Event)){
             //std::cout<<"event polled"<<std::endl;
             std::cout<<"event type: "<< Event.type<<std::endl;
@@ -53,5 +51,5 @@ int main(int srgc, char* argv[]){
         if(i!=0) std::cout<<frame<<" -> "<<i<<" "<<k<<std::endl;
     }
     return 0;
-}
+}*/
     
