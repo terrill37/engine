@@ -10,7 +10,7 @@ void Game::LateUpdate(){}
 
 void Game::Draw(){
     window.BeginDraw();
-
+    window.Draw();
     window.EndDraw();
 }
 

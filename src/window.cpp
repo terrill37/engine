@@ -1,7 +1,7 @@
 #include "window.hpp"
 #include <iostream>
 
-Window::Window(const std::string& windowName) : window(sf::VideoMode(800,800), windowName, sf::Style::Titlebar) {
+Window::Window(const std::string& windowName) : window(sf::VideoMode(800,400), windowName, sf::Style::Titlebar) {
     window.setVerticalSyncEnabled(true);
 }
 
@@ -15,8 +15,6 @@ void Window::Update(){
             if(event.key.code==sf::Keyboard::Escape)
                 window.close();
         }
-
-        //else break;
     }
 }
 
@@ -25,9 +23,14 @@ void Window::BeginDraw(){
     window.clear(sf::Color::White);
 }
 
-void Window::Draw(const sf::Drawable& drawable){
-    std::cout<<"DRAW\n";
-    window.draw(drawable);
+void Window::Draw(/*const sf::Drawable& drawable*/){
+//    window.draw(drawable);
+    circle.setRadius(20);
+    circle.setOutlineColor(sf::Color::Green);
+    circle.setOutlineThickness(5);
+    circle.setPosition(200,50);
+    window.draw(circle);
+
 }
 
 void Window::EndDraw(){
@@ -38,3 +41,4 @@ void Window::EndDraw(){
 bool Window::IsOpen() const{
     return window.isOpen();
 }
+
