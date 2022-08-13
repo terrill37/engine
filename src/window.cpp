@@ -7,30 +7,7 @@ Window::Window(const std::string& windowName) : window(sf::VideoMode(800,800), w
 
 void Window::Update(){
     sf::Event event;
-    //std::cout<<window.pollEvent(event)<<"\n";
-    //std::cout<<sf::Keyboard::isKeyPressed(sf::Keyboard::Down)<<"\n";
-    //std::cout<<sf::Keyboard::isKeyPressed<<std::endl; 
-    //std::cout<<"Enter button: "<<sf::Keyboard::Enter<<std::endl;
-    //window.pollEvent(event);
-    //std::cout<<"Pressed button: "<<event.key.code<<std::endl;
     while(window.pollEvent(event)){
-    //while(sf::Keyboard::isKeyPressed){ //LOOK INTO FIXING IN FUTURE
-        //window.pollEvent(event);
-        //std::cout<<"Pressed button: "<<event.key.code<<std::endl;
-        //std::cout<<"Escape button: "<<sf::Keyboard::Escape<<std::endl;
-        //std::cout<<"POLL EVENT\n";
-        //if(sf::Keyboard::isKeyPressed(sf::Keyboard::Down)){
-        //    std::cout<<"detected key down\n";
-        //    window.close();
-        //    break;
-        //}
-
-        //if(sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)){
-        //    std::cout<<"detected key\n";
-        //    window.close();
-        //    break;
-        //}
-        std::cout<<"event type: "<< event.type<<std::endl;
         if(event.type==sf::Event::Closed){
             window.close();
         }
