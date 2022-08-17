@@ -1,9 +1,9 @@
 #ifndef Game_hpp
 #define Game_hpp
 
-//#include <SFML/Graphics.hpp>
-
 #include "window.hpp"
+#include "gameMap.hpp"
+
 #include <iostream>
 
 class Game{
@@ -17,6 +17,7 @@ class Game{
 
     private:
         Window window;
+		
 };
 
 #endif // Game_hpp

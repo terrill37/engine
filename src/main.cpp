@@ -1,8 +1,12 @@
 #include <iostream>
 #include "Game.hpp"
-//#include "window.hpp"
 
 #include <SFML/Graphics.hpp>
+#include <SFML/System.hpp>
+#include <SFML/Window.hpp>
+#include <SFML/Audio.hpp>
+#include <SFML/Network.hpp>
+
 int main(){
     Game game;
     while(game.IsRunning()){
@@ -10,7 +14,7 @@ int main(){
         game.LateUpdate();
         game.Draw();
     }
-    std::cout<<"testing game\n";
+ 
     return 0;
 }
 

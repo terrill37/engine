@@ -1,7 +1,8 @@
 #include "window.hpp"
+
 #include <iostream>
 
-Window::Window(const std::string& windowName) : window(sf::VideoMode(800,400), windowName, sf::Style::Titlebar) {
+Window::Window(const std::string& windowName) : window(sf::VideoMode(512,256), windowName, sf::Style::Titlebar) {
     window.setVerticalSyncEnabled(true);
 }
 
@@ -19,17 +20,19 @@ void Window::Update(){
 }
 
 void Window::BeginDraw(){
-    //std::cout<<"begin DRAW\n";
+   // std::cout<<"begin DRAW\n";
     window.clear(sf::Color::White);
 }
 
-void Window::Draw(/*const sf::Drawable& drawable*/){
-//    window.draw(drawable);
-    circle.setRadius(20);
-    circle.setOutlineColor(sf::Color::Green);
-    circle.setOutlineThickness(5);
-    circle.setPosition(200,50);
-    window.draw(circle);
+void Window::Draw(const sf::Drawable& drawable){
+    //std::cout<<"drawable"<<std::endl;
+	window.draw(drawable);
+    //circle.setRadius(20);
+    //circle.setOutlineColor(sf::Color::Green);
+    //circle.setOutlineThickness(5);
+    //circle.setPosition(0,0);
+    //circle.setFillColor(sf::Color::Red);
+    //window.draw(circle);
 
 }
 

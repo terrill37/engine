@@ -11,13 +11,12 @@ class Window{
         void Update();
 
         void BeginDraw();
-        void Draw(/*const sf::Drawable& drawable*/);
+        void Draw(const sf::Drawable& drawable);
         void EndDraw();
         bool IsOpen() const;
 
     private:
         sf::RenderWindow window;
-	sf::CircleShape circle;
 	
   	//shape.setFillColor(sf::Color::Green);
 
