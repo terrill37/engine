@@ -14,10 +14,13 @@ class Game{
         void LateUpdate();
         void Draw();
         bool IsRunning() const;
+        
+        sf::Texture playerTexture;
 
     private:
         Window window;
-		
+	    tileMap map;
+        Player player;
 };
 
 #endif // Game_hpp

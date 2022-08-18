@@ -3,12 +3,13 @@
 
 #include <string>
 #include <SFML/Graphics.hpp>
+#include "player.hpp"
 
 class Window{
     public:
         Window(const std::string& windowName);
 
-        void Update();
+        void Update(Player& player);
 
         void BeginDraw();
         void Draw(const sf::Drawable& drawable);

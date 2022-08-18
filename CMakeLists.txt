@@ -29,7 +29,8 @@ find_package(SFML 2.5
 add_executable(gameEngine ${CMAKE_CURRENT_LIST_DIR}/src/main.cpp 
                           ${CMAKE_CURRENT_LIST_DIR}/src/Game.cpp 
                           ${CMAKE_CURRENT_LIST_DIR}/src/window.cpp
-						  ${CMAKE_CURRENT_LIST_DIR}/src/gameMap.cpp)
+						  ${CMAKE_CURRENT_LIST_DIR}/src/gameMap.cpp
+                          ${CMAKE_CURRENT_LIST_DIR}/src/player.cpp)
 #                           ${CMAKE_CURRENT_LIST_DIR}/src/Game.cpp)
 
 #target_include_directories(gameEngine PRIVATE ${CMAKE_CURRENT_LIST_DIR}/include)
