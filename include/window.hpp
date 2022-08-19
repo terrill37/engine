@@ -10,7 +10,8 @@ class Window{
         Window(const std::string& windowName);
 
         void Update(Player& player);
-
+        
+        void setView(sf::View view);
         void BeginDraw();
         void Draw(const sf::Drawable& drawable);
         void EndDraw();

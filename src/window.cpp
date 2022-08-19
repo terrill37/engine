@@ -2,7 +2,7 @@
 
 #include <iostream>
 
-Window::Window(const std::string& windowName) : window(sf::VideoMode(512,256), windowName, sf::Style::Titlebar) {
+Window::Window(const std::string& windowName) : window(sf::VideoMode(1024,512), windowName, sf::Style::Titlebar) {
     window.setVerticalSyncEnabled(true);
 }
 
@@ -17,6 +17,15 @@ void Window::Update(Player& player){
             if(event.key.code==sf::Keyboard::Escape)
                 window.close();
             
+            //Player Speed
+            if(event.key.code==sf::Keyboard::LShift){
+                std::cout<<"shift clicked\n";
+                player.setSpeed(8, sf::milliseconds(50));
+            }
+            else
+                player.setSpeed(8, sf::milliseconds(80));
+
+
             //Player Movement
             if(event.key.code==sf::Keyboard::Down)
                 player.moveDown();
@@ -28,18 +37,23 @@ void Window::Update(Player& player){
                 player.moveLeft();
             
             //Player Speed
-            if(event.key.code==sf::Keyboard::LShift){
-                std::cout<<"shift clicked\n";
-                player.setSpeed(64, sf::milliseconds(50));
-            }
-            else
-                player.setSpeed(32, sf::milliseconds(80));
+            //if(event.key.code==sf::Keyboard::LShift){
+            //    std::cout<<"shift clicked\n";
+            //    player.setSpeed(8, sf::milliseconds(50));
+            //}
+            //else
+            //    player.setSpeed(8, sf::milliseconds(80));
 
             window.draw(player.getSprite());
             window.display();
 
         }
     }
+}
+
+void Window::setView(sf::View view){
+    //set window view
+    window.setView(view);
 }
 
 void Window::BeginDraw(){

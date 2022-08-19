@@ -14,6 +14,8 @@ class Player{
     void moveLeft();
     void setSpeed(float, sf::Time);
     
+    sf::Vector2f getPosition();
+    
     sf::Sprite getSprite() const;
 
   private:
